@@ -1,0 +1,28 @@
+html{   
+    font-family: ui-sans-serif, system-ui, 
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body{
+    margin: 0;
+    background-color: #000000;
+    color: whitesmoke;
+} 
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--decoration-color);
+    padding: 0 1rem;
+}
+
+a:any-link{
+    cursor: auto;
+}
+
+a {
+    text-decoration: none; /* Pour supprimer le soulignement */
+    color: inherit; /* Pour utiliser la couleur héritée du parent */
+}
