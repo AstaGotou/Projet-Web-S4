@@ -1,8 +1,8 @@
 <?php
 
-require_once './Manga.php';
+require_once './Anime.php';
 
-$mangaId = $_GET['id'];
+$animeId = $_GET['id'];
 $username = htmlspecialchars($_POST['username']);
 $message = htmlspecialchars($_POST['message']);
 $score = $_POST['myinfo_score'];
@@ -10,9 +10,9 @@ $score = $_POST['myinfo_score'];
 // var_dump => pour débuguer
 
 if ($message !== '' && $username !== '' && strlen($username) < 100) {
-    $manga = new Manga();
+    $anime = new Anime();
 
-    $manga->insertReview((int) $mangaId, $username, (int) $score, $message);
+    $anime->insertReview((int) $animeId, $username, (int) $score, $message);
 
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }

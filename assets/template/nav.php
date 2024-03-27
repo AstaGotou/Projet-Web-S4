@@ -1,15 +1,11 @@
 <nav> 
-    <!-- Menu gauche-->
-    <div id="logo"> 
-    <a href="" title="Retour à la page d'accueil">
-            <img src="assets/img/akatsuki.png" alt="Logo" aria-hidden="true" height="60" width="80"/>
+    <a id="logo" href="index.php?lang=<?= $lang ?>" title="Retour à la page d'accueil">
+        <img src="assets/img/akatsuki.png" alt="Logo" aria-hidden="true"/>
     </a>
-    </div>
-    <!---->
-    <ul id="barre-navigation">
-        <li id="boutonAnime" class = "" aria-haspopup="true">
+    <ul class="hide-ul-list">
+        <li id="boutonAnime" aria-haspopup="true">
             Anime
-            <ul id="bloc-Anime" class = "Bloc-Invisible">
+            <ul id ="bloc-Anime" class = "Bloc-Invisible">
                 <li>
                     <a href=""><?= $trad['nav']['anime']['Rechercher un anime'] ?> </a>
                 </li>
@@ -63,17 +59,108 @@
                 </li>
             </ul>
         </li>
+        <li id = "boutonLangue" aria-haspopup="true">
+            <?php if ($lang === 'en') {
+                echo 'English';
+            } else {
+                echo 'Français';
+            }
+            ?>
+            <ul id="bloc-Langue" class = "Bloc-Invisible">
+                <?php if ($lang === 'en') { ?>
+                    <li>
+                        <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇫🇷 Français</a>
+                    </li>
+                <?php } else { ?>
+                    <li>
+                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇬🇧 English</a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </li>
     </ul>
-    <div id="boutonConnexion" aria-haspopup="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
-        </svg>
-        <ul id ="bloc-Connexion" class = "Bloc-Invisible">>
-            <li>
-                <a href=""><?= $trad['nav']['connexion']['Connexion'] ?></a>
+    <button id=boutonMenu aria-haspopup="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </button>
+    <div id = "bloc-Menu" class = "Bloc-Invisible">
+        <button id = "closeMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-thick</title><path d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" /></svg>
+        </button>
+        <ul class = "hide-ul-list">
+            <li> 
+                Anime 
+                <hr>
+                <ul class = "hide-ul-list">
+                    <li>
+                        <a href=""><?= $trad['nav']['anime']['Rechercher un anime'] ?> </a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['anime']['Top anime'] ?></a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['anime']['Anime par saison'] ?></a>
+                    </li>
+                </ul>
+            </li>
+            <li> 
+                Manga 
+                <hr>
+                <ul class = "hide-ul-list">
+                    <li>
+                        <a href=""><?= $trad['nav']['manga']['Rechercher un manga'] ?></a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['manga']['Top manga'] ?></a>
+                    </li>
+                </ul>
+            </li>
+            <li> 
+                <?= $trad['nav']['autres']['Label'] ?>
+                <hr> 
+                <ul class = "hide-ul-list">
+                    <li>
+                        <a href=""><?= $trad['nav']['autres']['News'] ?></a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['autres']['Characters'] ?></a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['autres']['Support'] ?></a>
+                    </li>
+                </ul>
+            </li>
+            <li> 
+                <?= $trad['nav']['aide']['Label'] ?> 
+                <hr>
+                <ul class = "hide-ul-list">
+                    <li>
+                        <a href=""><?= $trad['nav']['aide']['A propos'] ?> </a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['aide']['Support'] ?></a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['aide']['FAQ'] ?></a>
+                    </li>
+                    <li>
+                        <a href=""><?= $trad['nav']['aide']['Support'] ?></a>
+                    </li>
+                </ul>
             </li>
             <li>
-                <a href=""><?= $trad['nav']['connexion']['Inscription'] ?></a>
+                <?= $trad ['nav']['menu']['Changer la langue'] ?>
+                <hr>
+                <ul class = "hide-ul-list">
+                    <?php if ($lang === 'en') { ?>
+                        <li>
+                            <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇫🇷 Français</a>
+                        </li>
+                    <?php } else { ?>
+                        <li>
+                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇬🇧 English</a>
+                        </li>
+                    <?php } ?>
+                </ul>
             </li>
         </ul>
     </div>

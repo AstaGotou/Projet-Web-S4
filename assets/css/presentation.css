@@ -1,0 +1,330 @@
+main {
+    display: grid;
+    grid-template-areas: 
+    "- titre titre --" 
+    "- poster note --"
+    "- poster synopsis --"
+    "- info synopsis --"
+    "- insertreview  insertreview --" 
+    "- allreview  allreview --"
+    "- SeeMore SeeMore --";
+
+    @media (max-width : 720px){
+        grid-template-rows: auto repeat(3, max-content) repeat(3, auto); 
+        grid-template-columns: auto 0.12fr 0.68fr auto; 
+    }
+
+    @media (min-width: 720px) {
+        grid-template-rows: auto repeat(3, max-content) repeat(3, auto); 
+        grid-template-columns: auto 0.12fr 0.43fr auto; 
+    }
+    gap : 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+main > h1 {
+    grid-area: titre;
+    color: rgb(218, 218, 218);
+    margin : 0;
+    height: min-content;
+    @media (max-width : 720px){
+        font-size: 1.4rem;
+    }
+}
+
+
+main > img {
+    grid-area: poster;
+    width: 100%;
+    min-width: 130px;
+    border: 3px solid rgb(173, 165, 165);
+}
+
+main > h2 {
+    margin : 0;
+    text-decoration : underline;
+    @media (max-width : 720px){
+        font-size: 1.2rem;
+    }
+    @media (min-width: 720px) {
+        font-size: 1.5rem;
+    }
+}
+
+#Synopsis {
+    grid-area: synopsis;
+}
+
+main > p {
+    grid-area: synopsis;
+    font-size: clamp(0.67rem, 1.5vw, 1.3rem);
+    @media (max-width : 720px){
+        margin-top: 30px;
+    }
+    @media (min-width: 720px) {
+        margin-top: 40px;
+    }
+}
+
+main > div {
+    grid-area : note;
+    margin : 0;
+    display : flex;
+    flex-direction : column;
+}
+
+main > div > p {
+    background-color: rgb(54, 80, 154);
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin-top : 0;
+    margin-bottom: 10px;
+    text-align: center;
+    @media (max-width : 720px){
+        width: 75px;
+        height: 20px;
+    }
+
+    @media (min-width: 720px) {
+        width: 100px;
+        height: 30px;
+        font-size: 23px;
+    }
+}
+
+main > div > p2 {
+    @media (max-width : 720px){
+        font-size: 20px;
+        margin-left: 6px;
+    }
+
+    @media (min-width: 720px) {
+        font-size: 25px;
+        margin-left: 11px;
+    }
+}
+
+main > ul {
+    grid-area: info;
+    padding: 0;
+    width: 100%;
+    font-size: clamp(0.65rem, 1.5vw, 1rem);
+    margin: 0;
+    border : 3px solid rgb(173, 165, 165);
+}
+
+main > ul > li {
+    margin: 0;
+    padding: 7px;
+}
+
+#InsertReview {
+    grid-area: insertreview;
+    text-decoration: underline;
+    @media (max-width : 720px){
+        font-size: 20px;
+    }
+
+    @media (min-width: 720px) {
+        font-size: 25px;
+    }
+}
+
+main > form{
+    grid-area: insertreview;
+    display: flex;
+    flex-direction: column;
+    @media (max-width : 720px){
+        margin-top: 30px;
+    }
+
+    @media (min-width: 720px) {
+        margin-top: 40px;
+    }
+}
+
+main > form > input {
+    width: 200px;
+    height: min-content;
+    background-color: #333;
+    border-color: #353535;
+    border-style: solid;
+    border-width: 1px;
+    font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    resize: none;
+    color: #e0e0e0;
+}
+
+main > form > button{
+    font-size: 12px;
+    width: max-content;
+}
+
+#AllReviews {
+    grid-area: allreview;
+    text-decoration: underline;
+    @media (max-width : 720px){
+        font-size: 20px;
+    }
+
+    @media (min-width: 720px) {
+        font-size: 25px;
+    }
+}
+
+main > section {
+    grid-area: allreview;
+    display: flex;
+    flex-direction: column;
+    @media (max-width : 720px){
+        margin-top: 50px;
+    }
+
+    @media (min-width: 720px) {
+        margin-top: 60px;
+    }
+}
+
+main > section > article > ul {
+    display: flex;
+    padding: 0;
+}
+
+main > section > article > ul > li > img {
+    width: 60px;
+    height: 60px;
+}
+
+main > section > article > ul > li > ul {
+    padding-left: 10px;
+}
+
+
+main > section > article > ul > li > ul > li:not(:first-child) {
+    padding-bottom: 10px;
+}
+
+main > section > article > ul > li > ul > li > ul {
+    display : flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+main > section > article > ul > li > ul > li > ul > li {
+    padding-right: 20px;
+}
+main > button {
+    grid-area: SeeMore;
+    width: max-content;
+}
+
+
+#myinfo_score{
+    background-color: #121212;
+    background-size: 14px 14px;
+    background-image: url(../img/icon-star-score.png?v=);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 85% 50%;
+    border: #414141 1px solid;
+    border-radius: 4px;
+    color: #abc4ed;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    padding: 4px 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: none;
+    width: 138px;
+    height: 20px;
+}
+
+#message {
+    border: 1px solid #353535;
+    height: 200px;
+    line-height: 18px;
+    padding: 14px;
+    width: 100%;
+    background-color: #333;
+    border-color: #353535;
+    border-style: solid;
+    border-width: 1px;
+    font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    resize: none;
+    color: #e0e0e0;
+}
+
+
+/*
+INSERT INTO manga (titre, chemin_photo, type, statut, date_sortie, date_fin, nombre_volume, nombre_chapitre) 
+VALUES (
+'Spy x Family',
+'spyxfamily.jpeg', 
+'Manga', 
+'En cours', 
+'2019-03-25', 
+NULL, 
+12, 
+75);
+
+INSERT INTO manga_all_title (id, langue, titre) 
+VALUES (
+'9', 
+'en', 
+'Spy x Family');
+
+INSERT INTO manga_genre (id, genre)
+VALUES (
+'8', 
+'Drama');
+
+INSERT INTO manga_synopsis (id, langue, synopsis) 
+VALUES (
+'9',
+'fr',
+'Dans ce monde magique, une personne est facilement identifiée comme ayant des capacités magiques grâce à une marque distinctive sur son visage. Ceux qui sont incapables de pratiquer la magie sont rapidement exterminés pour maintenir l''intégrité magique de la société. Cependant, au plus profond d''une forêt se trouve une anomalie chez Mash Burnedead, que l''on peut trouver en train de pomper du fer avec un bras et de soulever un chou à la crème de l''autre. Ce garçon distant, doté d''une force surhumaine, mais dépourvu de capacités magiques, mène une vie tranquille avec son père, loin de la société.
+<br><br>
+La paix de Mash est bientôt perturbée lorsque les autorités découvrent son manque de pouvoirs magiques. Ils lui lancent un ultimatum : rivaliser pour devenir un « Visionnaire Divin », ce qui forcerait tout le monde à l''accepter, sous peine d''être persécuté pour toujours. Pour protéger sa famille, il s''inscrit à la prestigieuse Easton Magic Academy, à laquelle seuls les étudiants les plus élitistes et les plus doués sont autorisés à fréquenter. Maintenant, Mash doit surmonter ses défauts en tant qu''être sans magie et surpasser les autres étudiants, en s''appuyant uniquement sur ses muscles.'
+);
+
+
+/*
+INSERT INTO anime (titre, chemin_photo, type, statut, date_sortie, date_fin, nombre_ep) 
+VALUES (
+'Oshi no Ko', 
+'oshinoko-s1.jpeg', 
+'TV', 
+'Terminé', 
+'2023-04-12', 
+'2023-06-28', 
+11
+);
+
+INSERT INTO anime_all_title (id, langue, titre) 
+VALUES (
+'9', 
+'en', 
+'Oshi no Ko');
+
+INSERT INTO anime_genre (id, genre)
+VALUES (
+'9', 
+'Supernatural');
+
+INSERT INTO anime_synopsis (id, langue, synopsis) 
+VALUES (
+'9',
+'fr',
+'Dans la ville côtière de Naples, la corruption est omniprésente : la police complote ouvertement avec les hors-la-loi, la drogue sévit parmi les jeunes et la mafia gouverne les rues d''une main de fer. Cependant, diverses rencontres fatidiques vont bientôt se produire.
+<br><br>
+Entrez Giorno Giovanna, un garçon de 15 ans ayant un lien excentrique avec la famille Joestar, qui vit de travail à temps partiel et de vol à la tire. De plus, il est doté de la capacité inexpliquée du Stand de donner et de créer la vie : faire pousser des plantes à partir du sol et transformer des objets inanimés en animaux vivants, une capacité qu''il a surnommée « Gold Experience ». Fasciné par la puissance des gangsters locaux, Giorno rêve de gravir les échelons et de devenir un "Gang-Star", un exploit rendu possible par sa rencontre avec Bruno Bucciarati, membre du gang Passione avec son propre sens de la justice.
+<br><br>
+JoJo no Kimyou na Bouken : Ougon no Kaze suit les efforts de Giorno après avoir rejoint l''équipe de Bruno alors qu''il travaillait sous Passione, repoussant d''autres gangsters et complotant secrètement pour renverser leur mystérieux patron.'
+
+
+*/
