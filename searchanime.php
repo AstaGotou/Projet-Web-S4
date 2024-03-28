@@ -49,7 +49,7 @@ require_once 'assets/php/Anime.php';
     ?>
     <main>
         <form method="get" action="assets/php/form3.php">
-            <input type="search" name="name" placeholder="Search.." required/>
+            <input type="search" name="name" placeholder="Search.." value ="<?= isset($_GET['name']) ? $_GET['name'] : '' ?>" required/>
         </form>
         <section>
 
