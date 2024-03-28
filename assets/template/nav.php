@@ -7,7 +7,7 @@
             Anime
             <ul id ="bloc-Anime" class = "Bloc-Invisible">
                 <li>
-                    <a href=""><?= $trad['nav']['anime']['Rechercher un anime'] ?> </a>
+                    <a href="searchanime.php?name="><?= $trad['nav']['anime']['Rechercher un anime'] ?> </a>
                 </li>
                 <li>
                     <a href=""><?= $trad['nav']['anime']['Top anime'] ?></a>
@@ -21,7 +21,7 @@
             Manga
             <ul id="bloc-Manga" class = "Bloc-Invisible">
                 <li>
-                    <a href=""><?= $trad['nav']['manga']['Rechercher un manga'] ?></a>
+                    <a href="searchmanga.php?name="><?= $trad['nav']['manga']['Rechercher un manga'] ?></a>
                 </li>
                 <li>
                     <a href=""><?= $trad['nav']['manga']['Top manga'] ?></a>
@@ -69,11 +69,11 @@
             <ul id="bloc-Langue" class = "Bloc-Invisible">
                 <?php if ($lang === 'en') { ?>
                     <li>
-                        <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇫🇷 Français</a>
+                        <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇫🇷 Français</a>
                     </li>
                 <?php } else { ?>
                     <li>
-                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇬🇧 English</a>
+                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?=((isset($animeId)) ? '&id=' . $animeId : '')?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇬🇧 English</a>
                     </li>
                 <?php } ?>
             </ul>
@@ -92,7 +92,7 @@
                 <hr>
                 <ul class = "hide-ul-list">
                     <li>
-                        <a href=""><?= $trad['nav']['anime']['Rechercher un anime'] ?> </a>
+                        <a href="searchanime.php"><?= $trad['nav']['anime']['Rechercher un anime'] ?> </a>
                     </li>
                     <li>
                         <a href=""><?= $trad['nav']['anime']['Top anime'] ?></a>
@@ -107,7 +107,7 @@
                 <hr>
                 <ul class = "hide-ul-list">
                     <li>
-                        <a href=""><?= $trad['nav']['manga']['Rechercher un manga'] ?></a>
+                        <a href="searchmanga.php"><?= $trad['nav']['manga']['Rechercher un manga'] ?></a>
                     </li>
                     <li>
                         <a href=""><?= $trad['nav']['manga']['Top manga'] ?></a>
@@ -153,11 +153,11 @@
                 <ul class = "hide-ul-list">
                     <?php if ($lang === 'en') { ?>
                         <li>
-                            <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇫🇷 Français</a>
+                            <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇫🇷 Français</a>
                         </li>
                     <?php } else { ?>
                         <li>
-                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : ((isset($animeId)) ? '&id=' . $animeId : '')?>">🇬🇧 English</a>
+                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇬🇧 English</a>
                         </li>
                     <?php } ?>
                 </ul>

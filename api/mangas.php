@@ -2,7 +2,7 @@
 
 require_once "../assets/php/Database.php";
 
-$mangaId = isset($_GET['id']) ? (int)$_GET['id'] : null;
+$mangaId = isset($_GET['id']) ? $_GET['id'] : null;
 
 $database = new Database();
 $pdo = $database->getPdo();

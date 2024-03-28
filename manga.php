@@ -27,7 +27,6 @@ if ($lang === 'en') {
     require_once 'assets/langue/fr.php';
 }
 
-require_once 'assets/php/Anime.php';
 require_once 'assets/php/Manga.php';
 
 $mangaId = $_GET['id'];
@@ -76,13 +75,13 @@ $mangaNote = $mangaObj->getMoyenneNote($mangaId);
         <h2 id="InsertReview"><strong><?= $trad['Review']['Write a review'] ?> :</strong></h2>
         <form action="assets/php/form.php<?= '?id=' . $mangaId ?>" method="post">
             <label for="username">Username : </label>
-            <input type="text" id="username" name="username"/>
+            <input type="text" id="username" name="username" required/>
 
             <label for="message">Message :</label>
-            <textarea id="message" name="message"></textarea>
-
-            <select name="myinfo_score" id="myinfo_score">
-                <option selected="selected" value="0">Select</option>
+            <textarea id="message" name="message" required></textarea>
+            
+            <label for="myinfo_score">Score : </label>
+            <select name="myinfo_score" id="myinfo_score" required>
                 <?php
                 $scores = array(
                     10 => "(10) " . $trad['Note']['10'],

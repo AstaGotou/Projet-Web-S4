@@ -2,7 +2,7 @@
 
 require_once "../assets/php/Database.php";
 
-$animeId = isset($_GET['id']) ? (int)$_GET['id'] : null;
+$animeId = isset($_GET['id']) ? $_GET['id'] : null;
 
 $database = new Database();
 $pdo = $database->getPdo();

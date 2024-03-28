@@ -58,7 +58,7 @@ main > h2 {
 
 main > p {
     grid-area: synopsis;
-    font-size: clamp(0.67rem, 1.5vw, 1.3rem);
+    font-size: clamp(0.67rem, 1.5vw, 1.15rem);
     @media (max-width : 720px){
         margin-top: 30px;
     }
@@ -179,10 +179,12 @@ main > section {
     display: flex;
     flex-direction: column;
     @media (max-width : 720px){
+        gap: 20px;
         margin-top: 50px;
     }
 
     @media (min-width: 720px) {
+        gap: 30px;
         margin-top: 60px;
     }
 }
@@ -190,6 +192,7 @@ main > section {
 main > section > article > ul {
     display: flex;
     padding: 0;
+    margin: 0;
 }
 
 main > section > article > ul > li > img {
@@ -220,8 +223,7 @@ main > button {
     width: max-content;
 }
 
-
-#myinfo_score{
+main > form > select {
     background-color: #121212;
     background-size: 14px 14px;
     background-image: url(../img/icon-star-score.png?v=);
@@ -243,7 +245,7 @@ main > button {
     height: 20px;
 }
 
-#message {
+main > form > textarea {
     border: 1px solid #353535;
     height: 200px;
     line-height: 18px;
@@ -320,11 +322,7 @@ INSERT INTO anime_synopsis (id, langue, synopsis)
 VALUES (
 '9',
 'fr',
-'Dans la ville côtière de Naples, la corruption est omniprésente : la police complote ouvertement avec les hors-la-loi, la drogue sévit parmi les jeunes et la mafia gouverne les rues d''une main de fer. Cependant, diverses rencontres fatidiques vont bientôt se produire.
+'Chaque fois que Naruto Uzumaki proclame qu''il deviendra un jour Hokage – un titre accordé au meilleur ninja du village caché dans les feuilles – personne ne le prend au sérieux. Depuis sa naissance, Naruto a été évité et ridiculisé par ses concitoyens du village. Mais leur mépris n''est pas dû au fait que Naruto est bruyant, espiègle ou à cause de son incompétence dans les arts ninja, mais parce qu''il y a un démon en lui. Avant la naissance de Naruto, le puissant et mortel renard à neuf queues a attaqué le village. Afin d''arrêter le déchaînement, le Quatrième Hokage a sacrifié sa vie pour sceller le démon à l''intérieur du corps du nouveau-né Naruto.
 <br><br>
-Entrez Giorno Giovanna, un garçon de 15 ans ayant un lien excentrique avec la famille Joestar, qui vit de travail à temps partiel et de vol à la tire. De plus, il est doté de la capacité inexpliquée du Stand de donner et de créer la vie : faire pousser des plantes à partir du sol et transformer des objets inanimés en animaux vivants, une capacité qu''il a surnommée « Gold Experience ». Fasciné par la puissance des gangsters locaux, Giorno rêve de gravir les échelons et de devenir un "Gang-Star", un exploit rendu possible par sa rencontre avec Bruno Bucciarati, membre du gang Passione avec son propre sens de la justice.
-<br><br>
-JoJo no Kimyou na Bouken : Ougon no Kaze suit les efforts de Giorno après avoir rejoint l''équipe de Bruno alors qu''il travaillait sous Passione, repoussant d''autres gangsters et complotant secrètement pour renverser leur mystérieux patron.'
-
-
+Ainsi, lorsqu''il est affecté à l''équipe 7 – avec ses nouveaux coéquipiers Sasuke Uchiha et Sakura Haruno, sous le mentorat du ninja vétéran Kakashi Hatake – Naruto est obligé de travailler avec d''autres personnes pour la première fois de sa vie. En suivant un entraînement rigoureux et en accomplissant des missions difficiles, Naruto doit apprendre ce que signifie travailler en équipe et tracer sa propre voie pour devenir un ninja à part entière reconnu par son village.'
 */

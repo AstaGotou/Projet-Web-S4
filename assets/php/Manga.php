@@ -99,11 +99,6 @@ class Manga extends Database
         return $this->pdo->query("SELECT * FROM manga_all_title WHERE id = $id")->fetchAll();
     }
 
-    public function getMangaThemeById(int $id): array
-    {
-        return $this->pdo->query("SELECT * FROM manga_theme WHERE id = $id")->fetch();
-    }
-
     public function getMangaGenreById(int $id): array
     {
         return $this->pdo->query("SELECT * FROM manga_genre WHERE id = $id")->fetchAll();

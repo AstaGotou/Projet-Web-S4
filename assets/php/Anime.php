@@ -97,11 +97,6 @@ class Anime extends Database
         return $this->pdo->query("SELECT * FROM anime_all_title WHERE id = $id")->fetchAll();
     }
     
-    public function getAnimeThemeById(int $id): array
-    {
-        return $this->pdo->query("SELECT * FROM anime_theme WHERE id = $id")->fetch();
-    }
-    
     public function getAnimeGenreById(int $id): array
     {
         return $this->pdo->query("SELECT * FROM anime_genre WHERE id = $id")->fetchAll();

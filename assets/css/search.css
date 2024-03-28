@@ -1,0 +1,92 @@
+main {
+    display: grid;
+    grid-template-areas: 
+    "- recherche --"
+    "- result --"
+    "- seeMore --";
+    @media (max-width : 720px){
+        grid-template-rows: auto minmax(500px, 1fr);
+        grid-template-columns: auto 0.8fr auto; 
+    }
+
+    @media (min-width: 720px) {
+        grid-template-rows: auto minmax(500px, 1fr);
+        grid-template-columns: auto 0.55fr auto; 
+    }
+    gap : 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+main > form {
+    grid-area: recherche;
+}
+
+main > form > input {
+    border: #3c3c3c 1px solid;
+    border-radius: 8px;
+    color: #e0e0e0;
+    float: left;
+    font-size: 14px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    text-indent: 10px;
+    width: 100%;
+    border-color: #353535;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #333;
+    appearance: auto;
+}
+
+main > section {
+    grid-area: result;
+    display: flex;
+    flex-direction: column;
+    @media (max-width : 720px){
+        margin-top: 8px;
+        gap : 4px;
+    }
+
+    @media (min-width: 720px) {
+        margin-top: 20px;
+        gap : 8px;
+    }
+}
+
+main > section > a > article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border : #3c3c3c 2px solid;
+    @media (max-width : 720px){
+        height: 110px;
+    }
+    @media (min-width: 720px) {
+        height : 170px;
+    }
+}
+
+main > section > a > article > img {
+    height: 100%;
+}
+
+main > section > a > article > p {
+    width: 100%;
+    margin-left: 20px;
+    @media (max-width : 720px){
+        font-size: 14px;
+    }
+
+    @media (min-width: 720px) {
+        font-size: 17px;
+    }
+}
+
+
+
+main > button {
+    grid-area: seeMore;
+    width: 100px;
+}

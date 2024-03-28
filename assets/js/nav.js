@@ -13,11 +13,6 @@ const blocAide = document.querySelector('#bloc-Aide');
 const blocLangue = document.querySelector('#bloc-Langue');
 const blocMenu = document.querySelector('#bloc-Menu');
 
-( () => {
-   const age = 25;
-   console.log(age);
-})();
-
 boutonAnime.addEventListener('click', function() {
     if (blocAnime.classList.contains('Bloc-Invisible')) {
         blocAnime.classList.remove('Bloc-Invisible');

@@ -26,7 +26,7 @@ main {
 
 main > img{
     grid-area: main1;
-    width: 92%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto; 
     margin-top: auto;
@@ -39,9 +39,8 @@ main > img{
 main > h2 {
     margin-top : 0;
     top : 0;
-    margin-left: 4%;
     height : 1.5rem;
-    width: 92%;
+    width: 100%;
     @media (max-width: 720px) {
         font-size: 0.9rem;
     }
@@ -74,7 +73,7 @@ main > h2 {
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto; 
-    width:  92%;
+    width:  100%;
     border-radius: 5px;
     overflow-x: scroll;
     overflow-y: hidden;
