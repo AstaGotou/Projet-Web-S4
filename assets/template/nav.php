@@ -1,6 +1,6 @@
 <nav> 
     <a id="logo" href="index.php?lang=<?= $lang ?>" title="Retour à la page d'accueil">
-        <img src="assets/img/akatsuki.png" alt="Logo" aria-hidden="true"/>
+        <img src="assets/img/akatsuki.png" alt="Retour a la page d'accueil" aria-hidden="true"/>
     </a>
     <ul class="hide-ul-list">
         <li id="boutonAnime" aria-haspopup="true">
@@ -69,11 +69,11 @@
             <ul id="bloc-Langue" class = "Bloc-Invisible">
                 <?php if ($lang === 'en') { ?>
                     <li>
-                        <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇫🇷 Français</a>
+                        <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($_GET['name'])) ? '&name=' . $_GET['name'] : '')?>">🇫🇷 Français</a>
                     </li>
                 <?php } else { ?>
                     <li>
-                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?=((isset($animeId)) ? '&id=' . $animeId : '')?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇬🇧 English</a>
+                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?=((isset($animeId)) ? '&id=' . $animeId : '')?><?=((isset($_GET['name'])) ? '&name=' . $_GET['name'] : '')?>">🇬🇧 English</a>
                     </li>
                 <?php } ?>
             </ul>
@@ -153,11 +153,11 @@
                 <ul class = "hide-ul-list">
                     <?php if ($lang === 'en') { ?>
                         <li>
-                            <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇫🇷 Français</a>
+                        <a href="?lang=fr<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($_GET['name'])) ? '&name=' . $_GET['name'] : '')?>">🇫🇷 Français</a>
                         </li>
                     <?php } else { ?>
                         <li>
-                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?= ((isset($animeId)) ? '&id=' . $animeId : '' )?><?=((isset($name)) ? '&name=' . $name : '&name=')?>">🇬🇧 English</a>
+                        <a href="?lang=en<?= (isset($mangaId)) ? '&id=' . $mangaId : '' ?><?=((isset($animeId)) ? '&id=' . $animeId : '')?><?=((isset($_GET['name'])) ? '&name=' . $_GET['name'] : '')?>">🇬🇧 English</a>
                         </li>
                     <?php } ?>
                 </ul>

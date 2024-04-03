@@ -2,7 +2,7 @@
 
 require_once './Anime.php';
 
-$animeName = htmlspecialchars($_GET['name']);
+$animeName = isset($_GET['name']) ? $_GET['name'] : '';
 
 // var_dump => pour débuguer
 

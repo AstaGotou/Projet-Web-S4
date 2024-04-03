@@ -14,6 +14,6 @@ if ($message !== '' && $username !== '' && strlen($username) < 100) {
 
     $anime->insertReview((int) $animeId, $username, (int) $score, $message);
 
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
+header('Location: /anime.php?id=' . $animeId);
 ?>

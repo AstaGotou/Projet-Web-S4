@@ -13,7 +13,6 @@ if ($message !== '' && $username !== '' && strlen($username) < 100) {
     $manga = new Manga();
 
     $manga->insertReview((int) $mangaId, $username, (int) $score, $message);
-
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
+header('Location: /manga.php?id=' . $mangaId);
 ?>

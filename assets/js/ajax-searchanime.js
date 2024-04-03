@@ -2,9 +2,9 @@ let counter = 0;
 const button = document.querySelector('#seeMore');
 
 function getNameFromURL() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const name = urlParams.get('name');
-  return name;
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    return name;
 }
 
 async function loadAnimeSearch () {

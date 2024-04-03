@@ -56,7 +56,7 @@ $mangaNote = $mangaObj->getMoyenneNote($mangaId);
     ?>
     <main>
         <h1><?=$mangaInfo['titre'] ?></h1>
-        <img src="assets/img/poster/manga/<?=$mangaInfo['chemin_photo'] ?>" alt="manga">
+        <img src="assets/img/poster/manga/<?=$mangaInfo['chemin_photo'] ?>" alt="">
         <h2 id ="Synopsis">Synopsis</h2>
         <p><?=$mangaSynopsis['synopsis'] ?></p>
         <ul>

@@ -49,7 +49,7 @@ require_once 'assets/php/Manga.php';
     require_once 'assets/template/nav.php';
     ?>
     <main>
-        <img src="assets/img/HomeWallpaper.jpeg" aria-hidden="true"/>
+        <img src="assets/img/HomeWallpaper.jpeg" aria-hidden="true" alt=""/>
         <h2 id="Anime-recommandation"><?= $trad['Accueil']['Recommandations Anime'] ?></h2>
         <ul id = "Bloc-Anime-Recommandation" class="carousel-hori">
             <?php 
@@ -58,7 +58,7 @@ require_once 'assets/php/Manga.php';
             ?>
             <li>
                 <a href="anime.php?id=<?= $animeRecommandation['id'] ?>">
-                    <img src="assets/img/poster/anime/<?= $animeRecommandation['chemin_photo'] ?>"/>
+                    <img src="assets/img/poster/anime/<?= $animeRecommandation['chemin_photo'] ?>" alt="Renvoie vers l'anime <?= $animeRecommandation['titre'] ?>"/>
                 </a>
             </li>
             <?php endforeach; ?>
@@ -71,7 +71,7 @@ require_once 'assets/php/Manga.php';
             ?>
             <li>
                 <a href="manga.php?id=<?= $mangaRecommandation['id'] ?>">
-                    <img src="assets/img/poster/manga/<?= $mangaRecommandation['chemin_photo'] ?>"/>
+                    <img src="assets/img/poster/manga/<?= $mangaRecommandation['chemin_photo'] ?>" alt="Renvoie vers le manga <?= $mangaRecommandation['titre'] ?>"/>
                 </a>
             </li>
             <?php endforeach; ?>
