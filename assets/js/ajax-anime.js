@@ -32,15 +32,13 @@ function getIdFromURL() {
 async function loadAnimeReview () {
 
   const container = document.querySelector('section')
-  const response = await fetch('../../api/animes.php?id=' + getIdFromURL());
+  const response = await fetch('../../api/animes.php?id=' + getIdFromURL() + '&offset=' + counter);
   const reviews = await response.json()
 
+  const reponsemax = await fetch('../../api/anime-comment.php?id=' + getIdFromURL());
+  const max = await reponsemax.json()
 
-  for (let i = counter; i < counter + 5; i++) {
-    if (i >= reviews.length) {
-      button.classList.add('Bloc-Invisible');
-      break; // Sortir de la boucle si nous avons atteint la fin des avis
-    }
+  reviews.forEach((review) => {
     container.insertAdjacentHTML(
       'beforeend',
       `<article>
@@ -53,27 +51,27 @@ async function loadAnimeReview () {
                 <li>
                   <ul>
                     <li>
-                      <strong>${reviews[i].username}</strong>
+                      <strong>${review.username}</strong>
                     </li>
                     <li>
-                      ${reviews[i].date_publication}
+                      ${review.date_publication}
                     </li>
                   </ul>
                 </li>
                 <li>
-                  ${reviews[i].note}⭐️
+                  ${review.note}⭐️
                 </li>
                 <li>
-                ${reviews[i].commentaire}
+                ${review.commentaire}
                 </li>
               </ul>
           </li>
         </ul>
       </article>`
     );
-  }
+  })
   counter += 5; // Mettre à jour le compteur pour la prochaine fois
-  if(counter >= reviews.length) {
+  if(counter >= max) {
     button.classList.add('Bloc-Invisible');
   }
   console.log(reviews);

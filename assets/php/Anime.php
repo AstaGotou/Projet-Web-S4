@@ -106,7 +106,7 @@ class Anime extends Database
     {
         return $this->pdo->query('SELECT * FROM anime where id = 1 OR id = 2 OR id = 3 OR id = 4 OR id = 5 OR id = 6 OR id = 7 OR id = 8 OR id = 9')->fetchAll();
     }
-    
+
 }
 
 ?>
