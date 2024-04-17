@@ -1,31 +1,6 @@
 <?php
 
-$lang = 'fr';
-
-if (isset($_GET['lang'])) {
-    if ($_GET['lang'] === 'en' || $_GET['lang'] === 'fr') {
-        setcookie(
-            'lang',
-            $_GET['lang'],
-            time() + 60 * 60 * 24 * 365,
-            '/',
-            '',
-            false,
-            true,
-        );
-        $lang = $_GET['lang'];
-    }
-} else {
-    if (isset($_COOKIE['lang']) && ($_COOKIE['lang'] === 'en' || $_COOKIE['lang'] === 'fr')) {
-        $lang = $_COOKIE['lang'];
-    }
-}
-
-if ($lang === 'en') {
-    require_once 'assets/langue/en.php';
-} else {
-    require_once 'assets/langue/fr.php';
-}
+require_once 'assets/template/setlangue.php';
 
 require_once 'assets/php/Manga.php';
 
@@ -101,14 +76,14 @@ $mangaNote = $mangaObj->getMoyenneNote($mangaId);
                 }
                 ?>
             </select>
-            <button type="submit"><?=$trad['Review']['Post a review'] ?></button>
+            <button aria-label="Poster la critique" type="submit"><?=$trad['Review']['Post a review'] ?></button>
         </form>
         <h2 id ="AllReviews"><strong><?= $trad['Review']['All Reviews'] ?> :</strong></h2>
         <section>
 
         </section>
 
-        <button id="seeMore">Voir plus</button>
+        <button aria-label='Affiche les critiques suivantes' id="seeMore">Voir plus</button>
     </main>
     <?php
     require_once 'assets/template/footer.php';
