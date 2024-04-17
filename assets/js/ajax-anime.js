@@ -14,8 +14,8 @@ form.addEventListener('submit', (event) => {
   else if (message.value == ''){
     alert('Veuillez entrer un message non vide');
   }
-  else if (score.value == ''){
-    alert('Veuillez entrer un score non nul');
+  else if (score.value == '' || score.value == -1){
+    alert('Veuillez entrer un score');
   }
   else{
     form.submit();

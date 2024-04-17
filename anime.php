@@ -80,6 +80,7 @@ $animeNote = $animeObj->getMoyenneNote($animeId);
 
             <label for="myinfo_score">Score : </label>
             <select name="myinfo_score" id="myinfo_score" required>
+                <option selected="selected" value="-1">Select</option>
                 <?php
                 $scores = array(
                     10 => "(10) " . $trad['Note']['10'],
