@@ -11,10 +11,10 @@
 **Bon à savoir**
 
 1. Le projet utilise comme language pour la BDD Sqlite3.
-2. Certaines balises <a> dans la <nav> et dans le footer ne sont pas toutes opérationnelles, ces éléments ne seront que purement esthétique sur la page.
+2. Certaines balises "a" dans la "nav" et dans le "footer" ne sont pas toutes opérationnelles, ces éléments ne seront que purement esthétique sur la page.
 3. Cependant, le lien vers 'rechercher un anime' dans l'onglet 'Anime' et le lien vers 'rechercher un manga' dans l'onglet manga sont fonctionnels.
-4. La balise <form> avec la méthode POST se trouve dans le fichier manga.php et anime.php qui sont des pages de présentations des différents mangas et animes.
-5. La balise <form> avec la méthode GET se trouve dans le fichier searchmanga.php et searchanime.php qui sont des pages de recherches de différents contenus.
+4. La balise "form" avec la méthode POST se trouve dans le fichier manga.php et anime.php qui sont des pages de présentations des différents mangas et animes.
+5. La balise "form" avec la méthode GET se trouve dans le fichier searchmanga.php et searchanime.php qui sont des pages de recherches de différents contenus.
 
 
 
