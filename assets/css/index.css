@@ -120,6 +120,7 @@ main > h2 {
     margin :0;
     margin-top: 0px;
     margin-bottom: auto;
+    z-index: 3;
     @media (max-width : 720px){
         width: 80px;
         height: inherit;
@@ -139,15 +140,16 @@ main > h2 {
     justify-content: center;
     height: inherit;
     width: inherit;
-}
-
-.carousel-hori > li > a > img {
-    height: 100%;
-    width: inherit;
     z-index: 2;
 }
 
-.carousel-hori > li > a > img:hover {
+.carousel-hori > li > a > img {
+    height: inherit;
+    width: inherit;
+    z-index: 1;
+}
+
+.carousel-hori > li:hover {
     opacity: 0.6;
     transition: 0.5s;
 }
