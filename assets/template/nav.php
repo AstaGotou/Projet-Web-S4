@@ -1,5 +1,5 @@
 <nav> 
-    <a id="logo" href="index.php?lang=<?= $lang ?>" title="Retour à la page d'accueil">
+    <a id="logo" href="index.php" title="Retour à la page d'accueil">
         <img src="assets/img/akatsuki.png" alt="Retour a la page d'accueil" aria-hidden="true"/>
     </a>
     <ul class="hide-ul-list">
