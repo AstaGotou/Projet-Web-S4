@@ -1,6 +1,5 @@
 <?php
-
-require_once 'assets/template/setlangue.php';
+require_once 'assets/template/setlangue.php'; 
 
 require_once 'assets/php/Anime.php';
 
